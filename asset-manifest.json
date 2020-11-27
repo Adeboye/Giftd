@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/giftd/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/giftd/static/js/main.724e6aa7.chunk.js",
-    "main.js.map": "/giftd/static/js/main.724e6aa7.chunk.js.map",
+    "main.js": "/giftd/static/js/main.a8984504.chunk.js",
+    "main.js.map": "/giftd/static/js/main.a8984504.chunk.js.map",
     "runtime-main.js": "/giftd/static/js/runtime-main.1c9a1eac.js",
     "runtime-main.js.map": "/giftd/static/js/runtime-main.1c9a1eac.js.map",
     "static/js/2.e6e2916b.chunk.js": "/giftd/static/js/2.e6e2916b.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.1c9a1eac.js",
     "static/js/2.e6e2916b.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.724e6aa7.chunk.js"
+    "static/js/main.a8984504.chunk.js"
   ]
 }
