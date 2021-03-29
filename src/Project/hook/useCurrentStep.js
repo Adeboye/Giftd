@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import MixpanelService from '../../shared/services/MixpanelService';
 import data from '../data';
 
 function computeStepValues(step) {
@@ -13,26 +14,47 @@ const useCurrentStep = (step) => {
   const updateGiftCriteria = (val) => {
     switch (step) {
       case 1:
+        MixpanelService.track('Track gift step1', {
+          stepNumber: 1,
+          demographic: val.name
+        });
         setCriteria((prevState) => {
           return { ...prevState, demographic: val };
         });
         break;
       case 2:
+        MixpanelService.track('Track gift step2', {
+          stepNumber: 1,
+          giftType: val.name
+        });
         setCriteria((prevState) => {
           return { ...prevState, giftType: val };
         });
         break;
       case 3:
+        MixpanelService.track('Track gift step3', {
+          stepNumber: 1,
+          giftType: val.name
+        });
         setCriteria((prevState) => {
           return { ...prevState, relation: val };
         });
         break;
       case 4:
+        MixpanelService.track('Track gift step4', {
+          stepNumber: 1,
+          occasion: val
+        });
         setCriteria((prevState) => {
           return { ...prevState, occasion: val };
         });
         break;
       case 5:
+        MixpanelService.track('Track gift step5', {
+          stepNumber: 1,
+          minPrice: val.min,
+          maxPrice: val.max
+        });
         setCriteria((prevState) => {
           return { ...prevState, priceRange: { min: val.min, max: val.max } };
         });

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import api from '../../shared/utils/api';
+import MixpanelService from '../../shared/services/MixpanelService';
 
 import { GiftWrapper, GiftCard, GiftLink, GiftImage, GiftLabel, SeeMore } from './Styles';
 
@@ -37,6 +38,12 @@ const ResultsContainer = ({ isLoading, loadingFn, criteria, moveForward }) => {
     }
   };
 
+  const trackResultsClick = (url) => {
+    MixpanelService.track('Redirect to etsy from image', {
+      url
+    });
+  };
+
   const [gifts, setGifts] = useState([]);
   const [pageOffset, setpageOffset] = useState(0);
   const [isFetchingMore, setisFetchingMore] = useState(false);
@@ -48,6 +55,9 @@ const ResultsContainer = ({ isLoading, loadingFn, criteria, moveForward }) => {
       if (isLoading) {
         loadingFn(false);
         moveForward();
+        MixpanelService.track('View results page', {
+          numberResults: data?.count
+        });
       }
 
       setpageOffset(data?.pagination?.next_offset);
@@ -67,7 +77,12 @@ const ResultsContainer = ({ isLoading, loadingFn, criteria, moveForward }) => {
           <GiftWrapper>
             {gifts.map((gift) => {
               return (
-                <GiftLink key={gift.id} href={gift.url} target="_blank">
+                <GiftLink
+                  key={gift.id}
+                  href={gift.url}
+                  onClick={() => trackResultsClick(gifts.url)}
+                  target="_blank"
+                >
                   <GiftCard>
                     <GiftImage src={gift?.Images[0].url_570xN} />
                     <GiftLabel>{gift.title}</GiftLabel>

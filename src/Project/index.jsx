@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { ProjectPage, PageHeading, ProjectContent, ResultsContent } from './Styles';
+import { ProjectPage, ProjectContent, ResultsContent } from './Styles';
 import ContentContainer from './ContentContainer';
 import ImageContainer from './ImageContainer';
 import ResultsContainer from './ResultsContainer';
@@ -42,8 +42,6 @@ const Project = () => {
 
   return (
     <ProjectPage>
-      <PageHeading>GIFT&apos;D</PageHeading>
-
       <ProjectContent>
         <ContentContainer
           content={data}
