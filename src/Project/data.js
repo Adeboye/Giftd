@@ -61,7 +61,7 @@ const ProjectData = [
     header: "Let's find that perfect gift!",
     subHeader: (msg) =>
       `Tell us how much you want to spend on this gift for my ${
-        msg.relation
+        msg.relation.name
       } who is ${demographicMsg(msg.demographic)} that loves ${msg.giftType.name}:`,
     bubbleTitle: () => 'I want to spend',
     input: ['Min', 'Max'],
