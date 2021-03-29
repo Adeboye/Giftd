@@ -21,7 +21,7 @@ const AboutPage = () => {
           <Title>About GIFT&apos;D</Title>
           <Content>
             <StyledDiv>
-              About Gift’d Gift-giving is part of the culture, no atter where you are and no matter
+              About Gift’d Gift-giving is part of the culture, no matter where you are and no matter
               how long you stay. ~ Christalynn Brannen (Doing business with Japanese men)
             </StyledDiv>
 
