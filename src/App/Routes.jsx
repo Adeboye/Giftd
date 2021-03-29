@@ -9,7 +9,7 @@ const Routes = () => (
   <Router>
     <Header />
     <Switch>
-      <Route exact path="/" component={Project} />
+      <Route exact path="/" render={() => <Project key={Math.random()} />} />
       <Route path="/about" component={About} />
       <Route exact path="/reviews" component={Project} />
     </Switch>

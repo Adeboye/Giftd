@@ -1,5 +1,4 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 import {
   StyledHeader,
@@ -12,16 +11,10 @@ import {
 } from './Styles';
 
 const Header = () => {
-  const history = useHistory();
-
-  const resetPage = () => {
-    history.go(0);
-  };
-
   return (
     <StyledHeader>
       <StyledHeaderLogo>
-        <StyledAnchor onClick={resetPage}>GIFT&apos;D</StyledAnchor>
+        <StyledNavLink to="/">GIFT&apos;D</StyledNavLink>
       </StyledHeaderLogo>
       <StyledNav>
         <StyledList>
