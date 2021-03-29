@@ -22,9 +22,6 @@ const Header = () => {
             <StyledNavLink to="/about">About Us</StyledNavLink>
           </StyledListItem>
           <StyledListItem>
-            <StyledNavLink to="/reviews">Reviews</StyledNavLink>
-          </StyledListItem>
-          <StyledListItem>
             <StyledAnchor href="mailto:giftd.gifts@gmail.com">Contact</StyledAnchor>
           </StyledListItem>
         </StyledList>
