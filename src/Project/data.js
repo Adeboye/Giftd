@@ -40,7 +40,8 @@ const ProjectData = [
   },
   {
     header: "Let's find that perfect gift!",
-    subHeader: (msg) => `Tell us who the ${msg.demographic} that loves ${msg.giftType} is:`,
+    subHeader: (msg) =>
+      `Tell us who the ${msg.demographic.name} that loves ${msg.giftType.name} is:`,
     bubbleTitle: () => 'The gift recipient is my:',
     bubble: Relation,
     back: true,
