@@ -24,7 +24,7 @@ const useCurrentStep = (step) => {
         break;
       case 2:
         MixpanelService.track('Track gift step2', {
-          stepNumber: 1,
+          stepNumber: 2,
           giftType: val.name
         });
         setCriteria((prevState) => {
@@ -33,7 +33,7 @@ const useCurrentStep = (step) => {
         break;
       case 3:
         MixpanelService.track('Track gift step3', {
-          stepNumber: 1,
+          stepNumber: 3,
           giftType: val.name
         });
         setCriteria((prevState) => {
@@ -42,8 +42,8 @@ const useCurrentStep = (step) => {
         break;
       case 4:
         MixpanelService.track('Track gift step4', {
-          stepNumber: 1,
-          occasion: val
+          stepNumber: 4,
+          occasion: val.name
         });
         setCriteria((prevState) => {
           return { ...prevState, occasion: val };
@@ -51,7 +51,7 @@ const useCurrentStep = (step) => {
         break;
       case 5:
         MixpanelService.track('Track gift step5', {
-          stepNumber: 1,
+          stepNumber: 5,
           minPrice: val.min,
           maxPrice: val.max
         });

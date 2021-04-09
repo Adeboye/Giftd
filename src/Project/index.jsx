@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import MixpanelService from '../shared/services/MixpanelService';
 
 import { ProjectPage, ProjectContent, ResultsContent } from './Styles';
 import ContentContainer from './ContentContainer';
@@ -39,6 +40,10 @@ const Project = () => {
 
     return () => window.removeEventListener('beforeunload', warnUserNavigateAway);
   });
+
+  useEffect(() => {
+    MixpanelService.track('Land on Home page');
+  }, []);
 
   return (
     <ProjectPage>

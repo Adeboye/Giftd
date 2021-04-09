@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectPage = styled.div`
-  margin: 20px 50px 0 128px;
+  margin-top: 25px;
 `;
 
 export const PageHeading = styled.h1`

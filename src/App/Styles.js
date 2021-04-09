@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
-  /* position: fixed; */
   width: auto;
-  margin: 20px 34px 20px 112px;
   display: flex;
   justify-content: space-between;
 `;

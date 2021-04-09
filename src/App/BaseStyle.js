@@ -84,6 +84,11 @@ export default createGlobalStyle`
     #root {
         display: flex;
         flex-direction: column;
+        margin: 20px 34px 20px 112px;
+
+        @media only screen and (max-width: 1145px) {
+            margin: 20px;
+        }
     }
 
     button,

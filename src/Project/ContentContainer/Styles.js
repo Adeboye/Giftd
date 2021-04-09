@@ -12,7 +12,7 @@ export const ContentContainer = styled.div`
 
 export const Header = styled.div`
   font-weight: ${({ theme }) => theme.FONT_WEIGHTS.SEMI_BOLD};
-  margin-top: 135px;
+  margin-top: 30px;
   color: black;
   width: 475px;
   max-width: 100%;
