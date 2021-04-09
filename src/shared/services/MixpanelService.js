@@ -24,7 +24,7 @@ class MixpanelService {
   /**
    * Track mixpanel requests
    */
-  static track(eventName, eventProperties) {
+  static track(eventName, eventProperties = {}) {
     const filteredProperties = {};
 
     Object.keys(eventProperties).forEach((keys) => {
